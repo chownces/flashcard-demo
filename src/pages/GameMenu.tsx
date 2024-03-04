@@ -23,7 +23,7 @@ const GameMenu: React.FC<GameMenuProps> = ({
       throw new Error("Selected engine type does not exist!");
     }
     const delegatee = engineTypeToDelegateeMapping[value as EngineType];
-    setSelectedDelegatee(delegatee);
+    setSelectedDelegatee(() => delegatee);
   };
 
   const options = Object.values(EngineType).map((engineType) => ({

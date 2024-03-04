@@ -121,7 +121,11 @@ const GamePlay: React.FC<GamePlayProps> = ({ selectedDelegatee, endGame }) => {
         name="answer"
         rules={[{ required: true, message: "Please input an answer!" }]}
       >
-        <InputNumber size="large" autoFocus />
+        <InputNumber
+          size="large"
+          autoFocus
+          disabled={isTimesUpModalOpen || isWinModalOpen}
+        />
       </Form.Item>
       <Form.Item>
         <Button type="primary" htmlType="submit">
