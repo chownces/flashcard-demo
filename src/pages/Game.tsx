@@ -19,7 +19,10 @@ const Game: React.FC = () => {
       setIsGameStarted={setIsGameStarted}
     />
   ) : (
-    <GamePlay selectedDelegatee={selectedDelegatee} />
+    <GamePlay
+      selectedDelegatee={selectedDelegatee}
+      endGame={() => setIsGameStarted(false)}
+    />
   );
 };
 
